@@ -3,6 +3,7 @@ package com.example.assignment1_f20_wordlearnerapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -55,6 +56,25 @@ public class MainActivity extends AppCompatActivity {
 
     private void AddEventsToComponents() {
         wordListView.setAdapter(wordListAdaptor);
+
+
+
+
+        BtnExit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outstate) {
+
+        for(Word word: wordList) {
+            outstate.putSerializable(word.getName(),word);
+        }
+
+        super.onSaveInstanceState(outstate);
+    }
 }
