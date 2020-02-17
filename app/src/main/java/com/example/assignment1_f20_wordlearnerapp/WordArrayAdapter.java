@@ -31,6 +31,8 @@ public class WordArrayAdapter extends ArrayAdapter {
             listItem = LayoutInflater.from(myContext).inflate(R.layout.word_layout,parent,false);
         }
 
+
+
         return listItem;
     }
 

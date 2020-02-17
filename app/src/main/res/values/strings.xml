@@ -2,7 +2,13 @@
     <string name="app_name" translatable="false">Word Learner App</string>
     <string name="my_words">My Words:</string>
     <string name="Exit">Exit</string>
-    <string name="wordImage" translatable="false">wordImage</string>
-    <string name="wordName" translatable="false">wordName</string>
+    <string name="wordImage" translatable="false">Image of word:</string>
+    <string name="wordName" translatable="false">Name of word:</string>
     <string name="Pronunciation" translatable="false">Pronunciation</string>
+    <string name="wordPronunciation" translatable="false">Pronunciation of word:</string>
+    <string name="TVUserRating" translatable="false">0.0</string>
+    <string name="wordDescription">Description:</string>
+    <string name="notes">Notes:</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit">Edit</string>
 </resources>
