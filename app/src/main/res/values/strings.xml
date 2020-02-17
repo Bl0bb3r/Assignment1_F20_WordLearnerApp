@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name" translatable="false">Word Learner App</string>
+    <string name="my_words">My Words:</string>
+    <string name="Exit">Exit</string>
+    <string name="wordImage" translatable="false">wordImage</string>
+    <string name="wordName" translatable="false">wordName</string>
+    <string name="Pronunciation" translatable="false">Pronunciation</string>
+</resources>
