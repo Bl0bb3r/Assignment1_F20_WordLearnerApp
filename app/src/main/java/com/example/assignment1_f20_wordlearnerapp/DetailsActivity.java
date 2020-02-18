@@ -45,6 +45,7 @@ public class DetailsActivity extends AppCompatActivity {
         btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //TODO
                 // insert intent to activity_edit
             }
         });

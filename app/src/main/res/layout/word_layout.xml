@@ -30,7 +30,7 @@
             android:text="@string/wordName"
             android:background="@color/colorAccent"
             android:textColor="@color/colorBlack"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/TVWordPronunciation"
@@ -44,22 +44,24 @@
     </LinearLayout>
 
     <LinearLayout
+
         android:layout_width="160dp"
         android:layout_height="100dp"
 
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/TVUserRatingWordLabel"
+            android:id="@+id/TVUserWordRatingLabel"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/wordName"
+            android:text="@string/TVUserRating"
             android:background="@color/colorAccent"
             android:textColor="@color/colorBlack"
-            android:textSize="18sp" />
-
+            android:textSize="60dp"
+            android:textAlignment="center"/>
     </LinearLayout>
+
 
 
 </LinearLayout>

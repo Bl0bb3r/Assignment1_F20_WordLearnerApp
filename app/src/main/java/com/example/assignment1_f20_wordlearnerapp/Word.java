@@ -1,6 +1,7 @@
 package com.example.assignment1_f20_wordlearnerapp;
 
 import android.content.Context;
+import android.content.Intent;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -55,12 +56,15 @@ public class Word implements Serializable {
         this.name = Name;
     }
 
-    // image
-    public int getImage() { return this.image; }
 
-    public void setImage(int Image) {
-        this.image = Image;
+
+    // image
+    public Integer getImage() { return image; }
+
+    public void setImage(Integer Image) { image = Image;
     }
+
+
 
     // pronunciation
     public String getPronunciation() {
@@ -71,10 +75,14 @@ public class Word implements Serializable {
         this.pronunciation = Name;
     }
 
+
+
     // description
     public String getDescription() { return this.description; }
 
     public void setDescription(String Description) { this.description = Description; }
+
+
 
     // userRating
     public Double getUserRating() {
@@ -85,10 +93,14 @@ public class Word implements Serializable {
         this.userRating = UserRating;
     }
 
-    // notes
-    public String getNotes() { return this.notes; }
 
-    public void setNotes(String Notes) { this.notes = Notes; }
+
+    // notes
+    public String getNotes() { return notes; }
+
+    public void setNotes(String Notes) { notes = Notes; }
+
+
 
     // ID
     public Integer getID() {
@@ -98,6 +110,8 @@ public class Word implements Serializable {
     public void setID(Integer id) {
         ID = id;
     }
+
+
 
     public ArrayList<Word> GetWordList(Context context) {
         ArrayList<Word> wordList = new ArrayList<>();
@@ -115,6 +129,9 @@ public class Word implements Serializable {
                     rowLabel = false;
                     continue;
                 }
+
+                // taking data from .csv file - ImgMapper taking first datatype (name) as parameter so we can use switchcase on name
+                // to pick what image we insert from drawable.
 
                 Word newWord = new Word(id, data[0], data[1], data[2], 0.0, notes, (ImgMapper(data[0])));
                 wordList.add(newWord);
