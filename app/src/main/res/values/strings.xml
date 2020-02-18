@@ -11,4 +11,7 @@
     <string name="notes">Notes:</string>
     <string name="cancel">Cancel</string>
     <string name="edit">Edit</string>
+    <string name="wordRating">Word Rating:</string>
+    <string name="insertNotes">Insert notes here</string>
+    <string name="ok">OK</string>
 </resources>

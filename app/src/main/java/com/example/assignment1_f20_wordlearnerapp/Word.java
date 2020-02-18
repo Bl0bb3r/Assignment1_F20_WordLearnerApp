@@ -7,10 +7,12 @@ import java.util.ArrayList;
 
 public class Word implements Serializable {
 
-    private String name;
     private int image;
+    private String name;
     private String pronunciation;
     private Double userRating;
+    private String description;
+    private String notes;
 
 
     //Dummy data
@@ -20,13 +22,17 @@ public class Word implements Serializable {
         this.image = R.drawable.nophoto;
         this.pronunciation = "wuhd";
         this.userRating = 7.2;
+        this.description = "you try to describe the word word";
+        this.notes = "Insert Notes";
     }
 
-    public Word(String name, int image, String pronunciation, Double userRating) {
+    public Word(String name, int image, String pronunciation, Double userRating, String description, String notes) {
         this.name = name;
         this.image = image;
         this.pronunciation = pronunciation;
         this.userRating = userRating;
+        this.description = description;
+        this.notes = notes;
     }
 
     // Get og Set methods
@@ -64,6 +70,14 @@ public class Word implements Serializable {
     public void setUserRating(Double UserRating) {
         this.userRating = UserRating;
     }
+
+    public String getDescription() { return this.description; }
+
+    public void setDescription(String Description) { this.description = Description; }
+
+    public String getNotes() { return this.notes; }
+
+    public void setNotes(String Notes) { this.notes = Notes; }
 
     public ArrayList<Word> GetWordList(Context context) {
         ArrayList<Word> wordList = new ArrayList<>();
