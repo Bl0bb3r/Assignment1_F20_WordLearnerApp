@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -15,10 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private WordArrayAdapter wordListAdaptor;
     private ListView wordListView;
     private Word serviceWord;
-    private Word selectedWord;
     private Button BtnExit;
-
-    static final int REQUEST_EDIT = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +55,12 @@ public class MainActivity extends AppCompatActivity {
     private void AddEventsToComponents() {
         wordListView.setAdapter(wordListAdaptor);
 
+        wordListView.setOnClickListener(new AdapterView.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
 
 
         BtnExit.setOnClickListener(new View.OnClickListener() {
