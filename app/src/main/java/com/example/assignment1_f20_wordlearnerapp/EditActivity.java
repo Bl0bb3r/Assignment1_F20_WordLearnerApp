@@ -55,6 +55,7 @@ public class EditActivity extends AppCompatActivity {
                 Intent sendIntent = new Intent();
                 sendIntent.putExtra("passWord", myWord);
                 setResult(Activity.RESULT_OK,sendIntent);
+                finish();
             }
         });
 
