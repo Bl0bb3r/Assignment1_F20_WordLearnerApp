@@ -150,33 +150,33 @@ public class Word implements Serializable {
 
     private int ImgMapper(String name) {
         switch(name) {
-            case "Lion":
+            case "  Lion":
                 return (R.drawable.lion);
-            case "Leopard":
+            case "  Leopard":
                 return (R.drawable.leopard);
-            case "Cheetah":
+            case "  Cheetah":
                 return (R.drawable.cheetah);
-            case "Elephant":
+            case "  Elephant":
                 return (R.drawable.elephant);
-            case "Giraffe":
+            case "  Giraffe":
                 return (R.drawable.giraffe);
-            case "Kudu":
+            case "  Kudu":
                 return (R.drawable.kudo);
-            case "Gnu":
+            case "  Gnu":
                 return (R.drawable.gnu);
-            case "Oryx":
+            case "  Oryx":
                 return (R.drawable.oryx);
-            case "Camel":
+            case "  Camel":
                 return (R.drawable.camel);
-            case "Shark":
+            case "  Shark":
                 return (R.drawable.shark);
-            case "Crocodile":
+            case "  Crocodile":
                 return (R.drawable.crocodile);
-            case "Snake":
+            case "  Snake":
                 return (R.drawable.snake);
-            case "Buffalo":
+            case "  Buffalo":
                 return (R.drawable.buffalo);
-            case "Ostrich":
+            case "  Ostrich":
                 return (R.drawable.ostrich);
             default:
                 return (R.drawable.nophoto);

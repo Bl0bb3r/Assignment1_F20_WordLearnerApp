@@ -2,6 +2,7 @@ package com.example.assignment1_f20_wordlearnerapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Word> wordList;
     private WordArrayAdapter wordListAdaptor;
     private ListView wordListView;
+    private Word selectedWord;
     private Word serviceWord;
     private Button BtnExit;
 
@@ -55,13 +57,15 @@ public class MainActivity extends AppCompatActivity {
     private void AddEventsToComponents() {
         wordListView.setAdapter(wordListAdaptor);
 
-        wordListView.setOnClickListener(new AdapterView.OnClickListener() {
+        wordListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-
+            public void onItemClick(AdapterView<?> adapterView, View v, int i, long l) {
+                Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
+                Word selectedWord = wordList.get(i);
+                intent.putExtra("wordInput",selectedWord);
+                startActivity(intent);
             }
         });
-
 
         BtnExit.setOnClickListener(new View.OnClickListener() {
             @Override

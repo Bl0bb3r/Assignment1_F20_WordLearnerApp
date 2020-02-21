@@ -23,7 +23,7 @@
     <ListView
         android:id="@+id/LVmainActivity"
         android:layout_width="0dp"
-        android:layout_height="525dp"
+        android:layout_height="480dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
@@ -40,7 +40,7 @@
         android:text="@string/Exit"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="10dp"
         android:textColor="@color/colorBlack"
         android:background="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
