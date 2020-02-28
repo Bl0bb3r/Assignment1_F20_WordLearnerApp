@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View v, int i, long l) {
                 Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
-                Word selectedWord = wordList.get(i);
+                selectedWord = wordList.get(i);
                 intent.putExtra("wordInput",selectedWord);
                 startActivityForResult(intent, REQUEST_EDIT);
             }
