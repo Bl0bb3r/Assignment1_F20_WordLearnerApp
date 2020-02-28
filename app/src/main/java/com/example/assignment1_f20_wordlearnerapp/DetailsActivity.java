@@ -6,13 +6,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.util.ArrayList;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -54,8 +50,7 @@ public class DetailsActivity extends AppCompatActivity {
             case REQUEST_EDIT:
                 if (res == Activity.RESULT_OK){
 
-                    Word changedWord = (Word)data.getSerializableExtra("passChangesToDetails");
-                    myWord = changedWord;
+                    myWord = (Word)data.getSerializableExtra("passChangesToDetails");
                     Intent intentResult = new Intent(DetailsActivity.this, MainActivity.class);
                     intentResult.putExtra("passChangesToMain",myWord);
                     setResult(Activity.RESULT_OK,intentResult);

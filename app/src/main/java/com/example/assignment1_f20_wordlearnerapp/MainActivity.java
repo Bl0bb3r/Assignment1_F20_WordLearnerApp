@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 if (res == Activity.RESULT_OK){
 
                     Word changedWord = (Word)data.getSerializableExtra("passChangesToMain");
-                    int wordIndex= wordList.indexOf(selectedWord);
+                    int wordIndex = wordList.indexOf(selectedWord);
                     wordList.set(wordIndex,changedWord);
                     ((BaseAdapter)wordListView.getAdapter()).notifyDataSetChanged();
                 }
