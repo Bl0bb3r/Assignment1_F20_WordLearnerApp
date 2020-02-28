@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/TVWordLabel"
+        android:id="@+id/TVWordLabel_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/my_words"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/LVmainActivity"
+        android:id="@+id/LVmainActivity_main"
         android:layout_width="0dp"
         android:layout_height="480dp"
         android:layout_marginTop="10dp"
@@ -33,7 +33,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TVWordLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/TVWordLabel_main" />
+
+
 
     <Button
         android:id="@+id/btn_Exit_main"
@@ -46,7 +48,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LVmainActivity" />
+        app:layout_constraintTop_toBottomOf="@+id/LVmainActivity_main" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

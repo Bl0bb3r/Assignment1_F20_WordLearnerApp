@@ -2,10 +2,12 @@ package com.example.assignment1_f20_wordlearnerapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private Word selectedWord;
     private Word serviceWord;
     private Button BtnExit;
+
+    static final int REQUEST_EDIT = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,9 +53,25 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+    @Override
+    protected void onActivityResult(int req, int res, Intent data) {
+        super.onActivityResult(req, res,data);
+        switch (req){
+            case REQUEST_EDIT:
+                if (res == Activity.RESULT_OK){
+
+                    Word changedWord = (Word)data.getSerializableExtra("passChangesToMain");
+                    int wordIndex= wordList.indexOf(selectedWord);
+                    wordList.set(wordIndex,changedWord);
+                    ((BaseAdapter)wordListView.getAdapter()).notifyDataSetChanged();
+                }
+                break;
+        }
+    }
+
     private void MatchObjectWithComponents() {
         BtnExit = findViewById(R.id.btn_Exit_main);
-        wordListView = findViewById(R.id.LVmainActivity);
+        wordListView = findViewById(R.id.LVmainActivity_main);
     }
 
     private void AddEventsToComponents() {
@@ -63,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
                 Word selectedWord = wordList.get(i);
                 intent.putExtra("wordInput",selectedWord);
-                startActivity(intent);
+                startActivityForResult(intent, REQUEST_EDIT);
             }
         });
 

@@ -8,7 +8,7 @@
     tools:context=".EditActivity">
 
     <TextView
-        android:id="@+id/TVWordName"
+        android:id="@+id/TVWordName_edit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/TVuserWordRatingLabel"
+        android:id="@+id/TVuserWordRatingLabel_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -34,10 +34,10 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TVWordName" />
+        app:layout_constraintTop_toBottomOf="@+id/TVWordName_edit" />
 
     <TextView
-        android:id="@+id/TVuserWordRating"
+        android:id="@+id/TVuserWordRating_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="96dp"
@@ -45,13 +45,13 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/TVuserWordRatingLabel"
-        app:layout_constraintBaseline_toBaselineOf="@id/TVuserWordRatingLabel"
+        app:layout_constraintStart_toEndOf="@+id/TVuserWordRatingLabel_edit"
+        app:layout_constraintBaseline_toBaselineOf="@id/TVuserWordRatingLabel_edit"
         tools:layout_editor_absoluteY="109dp"
         tools:text="0.0" />
 
     <SeekBar
-        android:id="@+id/SBuserWordRating"
+        android:id="@+id/SBuserWordRating_edit"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginStart="50dp"
@@ -60,10 +60,10 @@
         android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TVuserWordRatingLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/TVuserWordRatingLabel_edit" />
 
     <TextView
-        android:id="@+id/TVnotesLabel"
+        android:id="@+id/TVnotesLabel_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -74,10 +74,10 @@
         android:textSize="24sp"
         android:textStyle="normal|bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SBuserWordRating" />
+        app:layout_constraintTop_toBottomOf="@+id/SBuserWordRating_edit" />
 
     <EditText
-        android:id="@+id/ETnotes"
+        android:id="@+id/ETnotes_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -89,7 +89,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TVnotesLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/TVnotesLabel_edit" />
 
     <Button
         android:id="@+id/btn_Cancel_edit"
@@ -100,7 +100,7 @@
         android:text="@string/cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ETnotes" />
+        app:layout_constraintTop_toBottomOf="@id/ETnotes_edit" />
 
     <Button
         android:id="@+id/btn_OK_edit"
@@ -114,7 +114,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_Cancel_edit"
-        app:layout_constraintTop_toBottomOf="@id/ETnotes" />
+        app:layout_constraintTop_toBottomOf="@id/ETnotes_edit" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

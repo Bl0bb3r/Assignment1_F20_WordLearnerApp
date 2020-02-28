@@ -42,8 +42,8 @@ public class EditActivity extends AppCompatActivity {
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent sendIntent = new Intent();
-                setResult(Activity.RESULT_CANCELED,sendIntent);
+                Intent cancelIntent = new Intent();
+                setResult(Activity.RESULT_CANCELED,cancelIntent);
                 finish();
             }
         });
@@ -53,7 +53,7 @@ public class EditActivity extends AppCompatActivity {
             public void onClick(View v) {
                 myWord.setNotes(ETnotes.getText().toString());
                 Intent sendIntent = new Intent();
-                sendIntent.putExtra("passWord", myWord);
+                sendIntent.putExtra("passChangesToDetails", myWord);
                 setResult(Activity.RESULT_OK,sendIntent);
                 finish();
             }
@@ -79,7 +79,7 @@ public class EditActivity extends AppCompatActivity {
     }
 
     private void UpdateView() {
-        myWord = (Word)getIntent().getSerializableExtra("WordToNote");
+        myWord = (Word)getIntent().getSerializableExtra("DetailToEdit");
 
         TVwordName.setText(myWord.getName());
         TVuserWordRating.setText(myWord.getUserRating().toString());
@@ -88,12 +88,18 @@ public class EditActivity extends AppCompatActivity {
         SBuserWordRating.setProgress((int)(myWord.getUserRating()*10));
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putSerializable("words",myWord);
+        super.onSaveInstanceState(outState);
+    }
+
     private void MatchObjectsWithComponents() {
         btnCancel = findViewById(R.id.btn_Cancel_edit);
         btnOK = findViewById(R.id.btn_OK_edit);
-        TVwordName = findViewById(R.id.TVWordName);
-        TVuserWordRating = findViewById(R.id.TVuserWordRating);
-        SBuserWordRating = findViewById(R.id.SBuserWordRating);
-        ETnotes = findViewById(R.id.ETnotes);
+        TVwordName = findViewById(R.id.TVWordName_edit);
+        TVuserWordRating = findViewById(R.id.TVuserWordRating_edit);
+        SBuserWordRating = findViewById(R.id.SBuserWordRating_edit);
+        ETnotes = findViewById(R.id.ETnotes_edit);
     }
 }
