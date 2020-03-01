@@ -76,7 +76,6 @@ public class DetailsActivity extends AppCompatActivity {
                 Intent intent = new Intent(DetailsActivity.this,EditActivity.class);
                 intent.putExtra("DetailToEdit",myWord);
                 startActivityForResult(intent, REQUEST_EDIT);
-                // TODO finish on click to EdiTActivity
 
             }
         });
