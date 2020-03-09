@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WordArrayAdapter extends ArrayAdapter {
+public class WordArrayAdapter extends ArrayAdapter<Word> {
 
     Context myContext;
     List<Word> wordList = new ArrayList<>();

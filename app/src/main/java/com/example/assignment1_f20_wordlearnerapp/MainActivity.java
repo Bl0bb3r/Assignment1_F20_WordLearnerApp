@@ -32,8 +32,10 @@ public class MainActivity extends AppCompatActivity {
         serviceWord = new Word();
         wordList = new ArrayList<>();
 
+        // Retrieving Wordlist
         wordList = serviceWord.GetWordList(getApplicationContext());
 
+        // Update listview on rotation of phone
         if(savedInstanceState != null) {
             ArrayList<Word> list = new ArrayList<>();
 
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                     Word changedWord = (Word)data.getSerializableExtra("passChangesToMain");
                     int wordIndex = wordList.indexOf(selectedWord);
                     wordList.set(wordIndex,changedWord);
+                    //wordList.set(wordIndex,changedWord); // getting an index error here - need help.
                     ((BaseAdapter)wordListView.getAdapter()).notifyDataSetChanged();
                 }
                 break;

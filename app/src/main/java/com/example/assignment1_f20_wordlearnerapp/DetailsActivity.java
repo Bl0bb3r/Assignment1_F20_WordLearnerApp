@@ -21,8 +21,6 @@ public class DetailsActivity extends AppCompatActivity {
     private TextView wordDescription;
     private TextView Notes;
 
-
-    private Word selectedWord;
     private Word myWord;
 
     static final int REQUEST_EDIT = 1;
