@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private Word serviceWord;
     private Button BtnExit;
 
+    private int wordIndex;
+
     static final int REQUEST_EDIT = 1;
 
     @Override
@@ -63,9 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 if (res == Activity.RESULT_OK){
 
                     Word changedWord = (Word)data.getSerializableExtra("passChangesToMain");
-                    int wordIndex = wordList.indexOf(selectedWord);
                     wordList.set(wordIndex,changedWord);
-                    //wordList.set(wordIndex,changedWord); // getting an index error here - need help.
                     ((BaseAdapter)wordListView.getAdapter()).notifyDataSetChanged();
                 }
                 break;
@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 selectedWord = wordList.get(i);
                 intent.putExtra("wordInput",selectedWord);
                 startActivityForResult(intent, REQUEST_EDIT);
+                wordIndex = i;
             }
         });
 
